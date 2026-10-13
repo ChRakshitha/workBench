@@ -1,4 +1,4 @@
-import { Bell, HelpCircle, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HeaderProps {
@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export function Header({ onMenuClick }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between border-b border-border bg-card px-4 py-4 sm:px-6">
+    <header className="flex min-h-16 items-center justify-between border-b border-border bg-card px-4 py-4 sm:px-6">
       <Button
         variant="ghost"
         size="icon"
@@ -17,12 +17,6 @@ export function Header({ onMenuClick }: HeaderProps) {
       >
         <Menu className="size-5" />
       </Button>
-
-      <div className="ml-auto flex items-center gap-4 text-muted-foreground">
-        <Bell className="size-5" />
-        <HelpCircle className="size-5" />
-        <div className="size-8 rounded-full bg-secondary" />
-      </div>
     </header>
   );
 }
